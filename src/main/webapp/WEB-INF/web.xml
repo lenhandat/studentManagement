@@ -1,0 +1,85 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://JAVA.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="3.0">
+
+
+	<display-name>Crud with strut2</display-name>
+
+
+
+
+
+	<error-page>
+		<location>/ErrorsPage.jsp</location>
+	</error-page>
+
+
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>com.Student.config.AppConfig</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>
+			org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+		</param-value>
+	</context-param>
+	<filter>
+		<filter-name>MyFilter2</filter-name>
+		<filter-class>com.Student.filter.AuthFilterAdmin</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyFilter2</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<filter>
+		<filter-name>MyFilterUser</filter-name>
+		<filter-class>com.Student.filter.AuthFilterUser</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyFilterUser</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter
+		</filter-class>
+		<init-param>
+			<param-name>struts.devmod</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		 <init-param>
+			<param-name>struts.action.extension</param-name>
+			<param-value>html</param-value>
+		</init-param> 
+
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<listener>
+
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+</web-app>

@@ -1,0 +1,223 @@
+.header {
+  padding: 5rem 20rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #00004d;
+}
+
+.header__text {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.header__text a {
+  color: #66ccff;
+  text-decoration: none;
+}
+.txt_radio{
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 2rem;
+}
+.header__right--element {
+  display: inline-block;
+  padding: 1rem;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #66ccff;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.header__right--element:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.header__right--element:hover {
+  transform: translateY(-2px);
+  background-color: #2b70f2;
+  color: #fff;
+}
+.header__right--element:active {
+  transform: translateY(0);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.table__student {
+  margin-top: 5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #4f546c;
+  /* background-color: #f4f6fb; */
+  margin-bottom: 4rem;
+}
+
+.title {
+  padding-top: 5rem;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #476b6b;
+}
+
+.table__content {
+  padding: 5rem 20rem;
+  border-collapse: collapse;
+  box-shadow: 0 0.5rem 1rem #e1e5ee;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.table__content thead {
+  box-shadow: 0 0.5rem 1rem #e1e5ee;
+}
+
+.table__content th {
+  padding: 1.5rem 2.5rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.table__content td {
+  padding: 1.5rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.table__content tr:nth-child(even) {
+  background-color: #f4f6fb;
+}
+
+.table__content td a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn-add {
+  width: max-content;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.btn-edit {
+  margin-right: 2rem;
+  color: #4d88ff;
+}
+
+.btn-delete {
+  color: #ff0066;
+}
+
+.list__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+.btn__element {
+  margin-right: 3rem;
+}
+ input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+  }
+/*===============================*/
+/*=======STYLE ADD SUBJECT FORM========*/
+/*===============================*/
+
+/* .form__addSubject {
+  text-align: center;
+} */
+
+.title__form {
+  text-align: center;
+  color: #ff0066;
+  margin-bottom: 4rem;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.form__addSubject {
+  padding: 1rem 60rem;
+  margin-bottom: 2rem;
+}
+
+.form__add {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 1rem 2rem rgba(102, 0, 41, 0.1);
+  padding: 3rem 3rem;
+}
+
+.form__item {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.form__item label {
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4f546c;
+  padding: 1rem 0;
+}
+
+.form__item input {
+  width: 70%;
+  outline: none;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  border: 1px solid #4f546c;
+}
+
+.btn__add {
+  display: inline-block;
+  text-align: center;
+}
+
+/*===============================*/
+/*=======STYLE UPDATE SUBJECT FORM========*/
+/*===============================*/
+
+.btn__update {
+  display: inline-block;
+  text-align: center;
+  background-color: #e6005c;
+  color: white;
+}
