@@ -170,11 +170,9 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <release>15</release>
-        </configuration>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>3.0.3</version>
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
